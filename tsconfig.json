@@ -1,11 +1,13 @@
 {
-  "extends": "plasmo/templates/tsconfig.base",
+  "extends": "@jupiter/tsconfig/base",
   "exclude": ["node_modules"],
-  "include": [".plasmo/**/*", "./**/*.ts", "./**/*.tsx"],
+  "include": ["./**/*.ts", "./**/*.tsx"],
   "compilerOptions": {
+    "jsx": "react",
     "paths": {
-      "~*": ["./*"]
+      "~*": ["./src/*"]
     },
-    "baseUrl": "."
+    "baseUrl": ".",
+    "typeRoots": ["./node_modules/@types", "./src/types"]
   }
 }
